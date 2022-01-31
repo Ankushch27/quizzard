@@ -1,3 +1,4 @@
+import clientPromise from 'db/mongodb'
 import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 
@@ -8,4 +9,5 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  secret: process.env.JWT_SECRET,
 })
