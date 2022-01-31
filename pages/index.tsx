@@ -1,5 +1,5 @@
+import Layout from '@components/common/Layout'
 import { signIn, signOut, useSession } from 'next-auth/react'
-import Layout from '../components/Layout'
 
 const IndexPage = () => {
   const { data: session, status } = useSession()
