@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React, { ReactNode } from 'react'
 import Avatar from './Avatar'
+import UsersList from './UsersList'
 
 interface LayoutProps {
   children?: ReactNode
@@ -19,7 +20,10 @@ const Layout = ({ children, title = 'Quizzard', avatarUrl }: LayoutProps) => (
     <header className="fixed w-full flex px-4 py-2 justify-end">
       <Avatar src={avatarUrl} />
     </header>
+    <div className="flex justify-around">
       {children}
+      <UsersList />
+    </div>
     <footer>
       <hr />
       <span>I'm here to stay (Footer)</span>
